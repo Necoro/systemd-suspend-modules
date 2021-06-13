@@ -4,11 +4,12 @@ pkgver=1.0
 pkgrel=2
 pkgdesc="Reload modules on suspend/hibernate with systemd"
 arch=('any')
-url="https://aur.archlinux.org/packages/systemd-suspend-modules/"
-license=('GPL')
+url="https://github.com/Necoro/systemd-suspend-modules"
+license=('MIT')
 depends=('systemd')
 backup=('etc/suspend-modules.conf')
 source=("suspend-modules")
+md5sums=('3535221eaa42adf16548da7c57c8d76b')
 
 package() {
     # Install files
@@ -16,4 +17,3 @@ package() {
     mkdir ${pkgdir}/etc/
     touch ${pkgdir}/etc/suspend-modules.conf
 }
-md5sums=('464a8347df5c492d48815145af1a3ee3')
